@@ -8,9 +8,11 @@ export default function Topbar() {
       <div className="topbarLeft">
         <span className='logo'>Real SNS</span>
       </div>
-      <div className="searchbar">
-        <Search className="searchIcon" />
-        <input type="text" className='searchInput' placeholder='探し物はなんですか?'/>
+      <div className="topbarCenter">
+        <div className="searchbar">
+          <Search className="searchIcon" />
+          <input type="text" className='searchInput' placeholder='探し物はなんですか?'/>
+        </div>
       </div>
       <div className="topbarRight">
         <div className="topbarIconItem">
