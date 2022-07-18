@@ -34,7 +34,7 @@ function Rightbar({ profile }) {
     return (
       <>
         <h4 className='rightbarTitle'>ユーザー情報</h4>
-        <div className="rightbarinfo">
+        <div className="rightbarInfo">
           <div className="rightbarInfoItem">
             <span className="rightbatInfokey">出身:</span>
             <span className="rightbatInfokey">福岡</span>
