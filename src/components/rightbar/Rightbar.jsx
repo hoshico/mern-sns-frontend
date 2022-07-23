@@ -9,10 +9,10 @@ function Rightbar({ profile }) {
     return (
       <>
         <div className="eventContainer">
-          <img src="star.png" alt="" className='starImg' />
+          <img src={`${PUBLIC_FOLDER}/star.png`} alt="" className='starImg' />
           <span className='eventText'><b>フォロワー限定</b>イベント開催中！</span>
         </div>
-        <img src="event.jpeg" alt="" className='eventImg' />
+        <img src={`${PUBLIC_FOLDER}/event.jpeg`} alt="" className='eventImg' />
         <h4 className='rightbarTitile'>オンラインの友達</h4>
         <ul className='rightbarFriendList'>
           {Users.map((user) => (
