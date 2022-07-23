@@ -4,6 +4,7 @@ import "./Post.css";
 import { Users } from "../../dummyData";
 
 export default function Post({ post }) {
+  const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
   // useStateの初期値でpost.like(いいねの数)をセット
   const [like, setLike] = useState(post.like);
   // likeを既に押しているかのフラグ
@@ -26,7 +27,7 @@ export default function Post({ post }) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <img src={Users.filter((user) => user.id === post.id)[0].profilePicture} alt="" className='postProfileImg' />
+            <img src={`${PUBLIC_FOLDER}${Users.filter((user) => user.id === post.id)[0].profilePicture}`} alt="" className='postProfileImg' />
             <span className='postUsername'>{Users.filter((user) => user.id === post.id)[0].username}</span>
             <span className="postDate">{post.date}</span>
           </div>
@@ -36,11 +37,11 @@ export default function Post({ post }) {
         </div>
         <div className="postCenter">
           <span className="postText">{post.desc}</span>
-          <img src={post.photo} alt="" className='postImg' />
+          <img src={`${PUBLIC_FOLDER}${post.photo}`} alt="" className='postImg' />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-            <img src="./assets/heart.png" alt="" className='likeIcon' onClick={() => handleLike()}/>
+            <img src={`${PUBLIC_FOLDER}/heart.png`}  alt="" className='likeIcon' onClick={() => handleLike()}/>
             <span className="postLikeCounter">{like}人がいいねを押しました</span>
           </div>
           <div className="postBottomRight">
