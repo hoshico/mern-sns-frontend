@@ -7,7 +7,7 @@ import "./Post.css";
 export default function Post({ post }) {
   const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
   // useStateの初期値でpost.like(いいねの数)をセット
-  const [like, setLike] = useState(post.like);
+  const [like, setLike] = useState(post.likes.length);
   // likeを既に押しているかのフラグ
   const [isLiked, setIsliked] = useState(false);
   const [user, setUser] = useState({});
@@ -47,7 +47,7 @@ export default function Post({ post }) {
         </div>
         <div className="postCenter">
           <span className="postText">{post.desc}</span>
-          <img src={`${PUBLIC_FOLDER}${post.photo}`} alt="" className='postImg' />
+          <img src={`${PUBLIC_FOLDER}${post.img}`} alt="" className='postImg' />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
