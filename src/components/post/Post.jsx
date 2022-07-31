@@ -2,7 +2,7 @@ import { MoreVert } from '@mui/icons-material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import "./Post.css";
-//import { Users } from "../../dummyData";
+import { format } from "timeago.js";
 
 export default function Post({ post }) {
   const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -39,7 +39,7 @@ export default function Post({ post }) {
           <div className="postTopLeft">
             <img src={user.profilePicture || `${PUBLIC_FOLDER}/person/noAvatar.png`} alt="" className='postProfileImg' />
             <span className='postUsername'>{user.username}</span>
-            <span className="postDate">{post.date}</span>
+            <span className="postDate">{format(post.createdAt)}</span>
           </div>
           <div className="postTopRight">
             <MoreVert />
