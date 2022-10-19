@@ -24,7 +24,7 @@ export default function  Profile() {
           </div>
         </div>
         <div className="profileRightBottom">
-          <Timeline />
+          <Timeline username="shincode" />
           <Rightbar profile />
         </div>
       </div>

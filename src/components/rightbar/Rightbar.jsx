@@ -1,5 +1,5 @@
 import React from 'react';
-import Online from '../onlie/Online';
+import Online from '../online/Online';
 import "./Rightbar.css";
 import { Users } from "../../dummyData";
 
